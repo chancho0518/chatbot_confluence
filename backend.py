@@ -1,6 +1,5 @@
 import os
 
-from dotenv import load_dotenv
 from langchain_openai.chat_models import ChatOpenAI
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.prompts.chat import ChatPromptTemplate
@@ -8,13 +7,11 @@ from langchain_core.output_parsers.string import StrOutputParser
 
 from retrieval import vectorstore
 
-load_dotenv()
-
 model = ChatOpenAI(
     model="gpt-4o",
     api_key=os.getenv('OPENAI_API_KEY'),
-    temperature=0.7,
-    max_tokens=2000,
+    temperature=0.8,
+    max_tokens=2500,
 )
 
 def tdbolt():
