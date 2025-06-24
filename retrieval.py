@@ -1,11 +1,11 @@
 import os
+import tiktoken
 
 from dotenv import load_dotenv
 from langchain_openai.embeddings.base import OpenAIEmbeddings
 from langchain_pinecone.vectorstores import PineconeVectorStore
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-import tiktoken
 from confluence import CustomConfluence
 from pinecone import PineconeApiException
 

@@ -1,5 +1,6 @@
 import os
 
+from dotenv import load_dotenv
 from langchain_openai.chat_models import ChatOpenAI
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.prompts.chat import ChatPromptTemplate
@@ -7,11 +8,13 @@ from langchain_core.output_parsers.string import StrOutputParser
 
 from retrieval import vectorstore
 
+load_dotenv()
+
 model = ChatOpenAI(
     model="gpt-4o",
     api_key=os.getenv('OPENAI_API_KEY'),
     temperature=0.7,
-    max_tokens=1200,
+    max_tokens=2000,
 )
 
 def tdbolt():
@@ -51,7 +54,3 @@ def tdbolt():
         'documents': retriever | format_documents, 
         'query': RunnablePassthrough()
         } | prompt | model | parser
-
-
-if __name__ == "__main__":
-    response = tdbolt().invoke("1:1모델로 1:N을 돌렸을때 성능차이가 있나?")
