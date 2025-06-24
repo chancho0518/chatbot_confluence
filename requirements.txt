@@ -1,0 +1,12 @@
+atlassian-python-api
+python-dotenv
+ipython
+langchain
+langchain-openai
+langchain-pinecone
+langchain-community
+html2text
+lxml
+slack-bolt
+streamlit
+pysqlite3-binary
