@@ -9,4 +9,5 @@ html2text
 lxml
 slack-bolt
 streamlit
+markdownify
 pysqlite3-binary
