@@ -8,7 +8,8 @@ from langchain.callbacks.base import BaseCallbackHandler
 
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
-st.title("Sample Confluence 가이드")
+# st.title("Sample Confluence 가이드")
+st.title("오성화학공업 문서")
 st.write("---")
 
 question = st.text_input('질문을 입력하세요')
